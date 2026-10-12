@@ -1,0 +1,43 @@
+{
+  "best_model": "knn",
+  "best_accuracy": 0.9333,
+  "feature_names": [
+    "sepal length (cm)",
+    "sepal width (cm)",
+    "petal length (cm)",
+    "petal width (cm)"
+  ],
+  "target_names": [
+    "setosa",
+    "versicolor",
+    "virginica"
+  ],
+  "results": [
+    {
+      "model": "knn",
+      "accuracy": 0.9333,
+      "macro_f1": 0.9327,
+      "run_id": "b3a6c798ca63458aac3071046c47c43b"
+    },
+    {
+      "model": "decision_tree",
+      "accuracy": 0.9333,
+      "macro_f1": 0.9333,
+      "run_id": "bef9a9ae6db54c0aa295d9889902aba0"
+    },
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.9333,
+      "macro_f1": 0.9333,
+      "run_id": "584ea9013a244e25878f96c169a5e769"
+    },
+    {
+      "model": "random_forest",
+      "accuracy": 0.9,
+      "macro_f1": 0.8997,
+      "run_id": "7376eba71b2c4a5184a3d5507ee6db1a"
+    }
+  ],
+  "dataset": "scikit-learn Iris dataset (150 samples; 4 features; 3 classes)",
+  "note": "Results are from a single stratified 80/20 split; accuracy can vary with split and settings."
+}

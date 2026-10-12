@@ -1,0 +1,31 @@
+services:
+  iris-app:
+    build: .
+    container_name: iris-mlops-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - mlflow-data:/app/mlruns
+      - model-data:/app/models
+      - artifact-data:/app/artifacts
+    environment:
+      MLFLOW_TRACKING_URI: file:/app/mlruns
+      MLFLOW_EXPERIMENT_NAME: iris-classification
+    restart: unless-stopped
+
+  mlflow-ui:
+    build: .
+    container_name: iris-mlflow-ui
+    command: ["mlflow", "ui", "--backend-store-uri", "file:/app/mlruns", "--host", "0.0.0.0", "--port", "5000"]
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow-data:/app/mlruns
+    depends_on:
+      - iris-app
+    restart: unless-stopped
+
+volumes:
+  mlflow-data:
+  model-data:
+  artifact-data:
