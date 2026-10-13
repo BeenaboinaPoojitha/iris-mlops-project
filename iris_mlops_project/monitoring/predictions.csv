@@ -1,0 +1,2 @@
+timestamp_utc,sepal length (cm),sepal width (cm),petal length (cm),petal width (cm),predicted_species,actual_species,correct
+2026-10-13T03:42:36.921627+00:00,4.6,2.1,2.7,0.8,Versicolor,Versicolor,True
